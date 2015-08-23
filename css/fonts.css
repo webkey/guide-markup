@@ -1,0 +1,11 @@
+/* kelson sans bold bg */
+@font-face {
+	font-family: 'kelson-sans-bold-bg';
+	src: url('../fonts/kelson-sans/bold-bg/kelson_sans_bold_bg.eot');
+	src: url('../fonts/kelson-sans/bold-bg/kelson_sans_bold_bg.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/kelson-sans/bold-bg/kelson_sans_bold_bg.woff') format('woff'),
+	url('../fonts/kelson-sans/bold-bg/kelson_sans_bold_bg.ttf') format('truetype'),
+	url('../fonts/kelson-sans/bold-bg/kelson_sans_bold_bg.svg#kelson_sans_bold_bg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

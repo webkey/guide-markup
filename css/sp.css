@@ -1,0 +1,122 @@
+/* icons */
+[class|="icon"],
+[class*=" icon-"]{background:url(../img/sprite-icons.png) 0 0 no-repeat;}
+.icon-star-white{ background-position: 0 0; width: 21px; height: 20px; }
+.icon-star-gray{ background-position: 0 -40px; width: 21px; height: 20px; }
+.icon-star-gray-full{ background-position: 0 -80px; width: 23px; height: 22px; }
+.icon-star-pink{ background-position: 0 -122px; width: 21px; height: 20px; }
+.icon-star-pink-full{ background-position: 0 -162px; width: 21px; height: 20px; }
+.icon-star-lg{ background-position: 0 -202px; width: 41px; height: 41px; }
+.icon-star-lg-full{ background-position: 0 -263px; width: 41px; height: 41px; }
+.icon-price-white{ background-position: 0 -324px; width: 25px; height: 17px; }
+.icon-price-gray{ background-position: 0 -361px; width: 25px; height: 17px; }
+.icon-time-white{ background-position: 0 -398px; width: 19px; height: 19px; }
+.icon-time-gray{ background-position: 0 -437px; width: 19px; height: 19px; }
+.icon-road-white{ background-position: 0 -476px; width: 23px; height: 27px; }
+.icon-review-white{ background-position: 0 -523px; width: 25px; height: 20px; }
+.icon-chat-gray{ background-position: 0 -563px; width: 20px; height: 17px; }
+.icon-car-white{ background-position: 0 -600px; width: 26px; height: 20px; }
+.icon-car-gray{ background-position: 0 -640px; width: 26px; height: 20px; }
+.icon-car-dark{ background-position: 0 -680px; width: 26px; height: 20px; }
+.icon-horse-white{ background-position: 0 -720px; width: 23px; height: 26px; }
+.icon-horse-sm-gray{ background-position: 0 -766px; width: 19px; height: 21px; }
+.icon-horse-dark{ background-position: 0 -807px; width: 23px; height: 26px; }
+.icon-walk-white{ background-position: 0 -853px; width: 22px; height: 33px; }
+.icon-walk-sm-gray{ background-position: 0 -906px; width: 16px; height: 24px; }
+.icon-walk-dark{ background-position: 0 -950px; width: 22px; height: 33px; }
+.icon-clock-white{ background-position: 0 -1003px; width: 22px; height: 22px; }
+.icon-clock-gray{ background-position: 0 -1045px; width: 22px; height: 22px; }
+.icon-local-white{ background-position: 0 -1087px; width: 23px; height: 27px; }
+.icon-local-dark{ background-position: 0 -1134px; width: 23px; height: 27px; }
+.icon-view-white{ background-position: 0 -1181px; width: 28px; height: 28px; }
+.icon-view-dark{ background-position: 0 -1229px; width: 28px; height: 28px; }
+.icon-print-white{ background-position: 0 -1277px; width: 21px; height: 19px; }
+.icon-close-white{ background-position: 0 -1316px; width: 13px; height: 13px; }
+.icon-delete-white{ background-position: 0 -1349px; width: 29px; height: 29px; }
+.icon-delete-opacity{ background-position: 0 -1398px; width: 29px; height: 29px; }
+.icon-delete-lg-white{ background-position: 0 -1447px; width: 41px; height: 41px; }
+.icon-done-lg-white{ background-position: 0 -1508px; width: 41px; height: 41px; }
+.icon-edit-white{ background-position: 0 -1569px; width: 19px; height: 19px; }
+.icon-settings-white{ background-position: 0 -1608px; width: 25px; height: 24px; }
+.icon-add-white{ background-position: 0 -1652px; width: 20px; height: 19px; }
+.icon-rebuild-white{ background-position: 0 -1691px; width: 24px; height: 23px; }
+.icon-optimize-white{ background-position: 0 -1734px; width: 22px; height: 21px; }
+.icon-places-white{ background-position: 0 -1775px; width: 33px; height: 33px; }
+.icon-more-white{ background-position: 0 -1828px; width: 14px; height: 12px; }
+.icon-email{ background-position: 0 -1860px; width: 15px; height: 11px; }
+.icon-password{ background-position: 0 -1891px; width: 13px; height: 17px; }
+.icon-message{ background-position: 0 -1928px; width: 14px; height: 14px; }
+.icon-info-gray{ background-position: 0 -1962px; width: 28px; height: 24px; }
+.icon-note-gray{ background-position: -61px 0; width: 30px; height: 22px; }
+.icon-address-gray{ background-position: -61px -42px; width: 42px; height: 42px; }
+.icon-phone-gray{ background-position: -61px -104px; width: 42px; height: 42px; }
+.icon-schedule-gray{ background-position: -61px -166px; width: 42px; height: 42px; }
+.icon-payment-gray{ background-position: -61px -228px; width: 42px; height: 42px; }
+.icon-site-gray{ background-position: -61px -290px; width: 42px; height: 42px; }
+.icon-email-gray{ background-position: -61px -352px; width: 42px; height: 42px; }
+.icon-question-pink{ background-position: -61px -414px; width: 26px; height: 22px; }
+.icon-magnifier-white{ background-position: -61px -456px; width: 22px; height: 22px; }
+.icon-magnifier-sm-gray{ background-position: -61px -498px; width: 20px; height: 20px; }
+.icon-food-dark{ background-position: -61px -538px; width: 21px; height: 37px; }
+.icon-food-pink{ background-position: -61px -595px; width: 21px; height: 37px; }
+.icon-gas-dark{ background-position: -61px -652px; width: 27px; height: 33px; }
+.icon-gas-pink{ background-position: -61px -705px; width: 27px; height: 33px; }
+.icon-farmacy-dark{ background-position: -61px -758px; width: 34px; height: 33px; }
+.icon-farmacy-pink{ background-position: -61px -811px; width: 34px; height: 33px; }
+.icon-airport-dark{ background-position: -61px -864px; width: 27px; height: 31px; }
+.icon-airport-pink{ background-position: -61px -915px; width: 27px; height: 31px; }
+.icon-museum-dark{ background-position: -61px -966px; width: 32px; height: 32px; }
+.icon-museum-pink{ background-position: -61px -1018px; width: 32px; height: 32px; }
+.icon-station-dark{ background-position: -61px -1070px; width: 26px; height: 31px; }
+.icon-station-pink{ background-position: -61px -1121px; width: 26px; height: 31px; }
+.icon-menu-white{ background-position: -61px -1172px; width: 28px; height: 11px; }
+.icon-arrow-b-gray{ background-position: -61px -1203px; width: 11px; height: 11px; }
+.icon-arrow-l-gray{ background-position: -61px -1234px; width: 11px; height: 11px; }
+.icon-arrow-t-gray{ background-position: -61px -1265px; width: 11px; height: 11px; }
+.icon-arrow-r-gray{ background-position: -61px -1296px; width: 11px; height: 11px; }
+.icon-arrow-b-white{ background-position: -61px -1327px; width: 11px; height: 11px; }
+.icon-arrow-l-white{ background-position: -61px -1358px; width: 11px; height: 11px; }
+.icon-arrow-t-white{ background-position: -61px -1389px; width: 11px; height: 11px; }
+.icon-arrow-r-white{ background-position: -61px -1420px; width: 11px; height: 11px; }
+.icon-update-pink{ background-position: -61px -1451px; width: 37px; height: 37px; }
+.icon-added-gray{ background-position: -61px -1508px; width: 15px; height: 15px; }
+.icon-newsline-white{ background-position: -61px -1543px; width: 54px; height: 54px; }
+.icon-services-white{ background-position: -61px -1617px; width: 54px; height: 54px; }
+.icon-routes-white{ background-position: -61px -1691px; width: 54px; height: 54px; }
+.icon-forum-white{ background-position: -61px -1765px; width: 54px; height: 54px; }
+.icon-lions-white{ background-position: -61px -1839px; width: 54px; height: 54px; }
+/* icons end */
+
+/* social icons */
+[class|="soc-icon"],
+[class*=" soc-icon-"] {background:url(../img/sprite-social.png) 0 0 no-repeat;}
+.soc-icon-ok-pink{ background-position: 0 0; width: 25px; height: 25px; }
+.soc-icon-twitter-pink{ background-position: 0 -45px; width: 25px; height: 25px; }
+.soc-icon-facebook-pink{ background-position: 0 -90px; width: 25px; height: 25px; }
+.soc-icon-vk-pink{ background-position: 0 -135px; width: 25px; height: 25px; }
+/* social icons end */
+
+/* arrows */
+[class|="arrow"],
+[class*=" arrow-"] {background:url(../img/sprite-arrows.png) 0 0 no-repeat;}
+/* arrows end */
+
+/* form icons */
+[class|="icon-form"],
+[class*=" icon-form-"] {background:url(../img/sprite-forms.png) 0 0 no-repeat;}
+.icon-form-checkbox{ background-position: 0 0; width: 13px; height: 13px; }
+.icon-form-checkbox-ch{ background-position: 0 -33px; width: 13px; height: 13px; }
+.icon-form-checkbox-d{ background-position: 0 -66px; width: 13px; height: 13px; }
+.icon-form-checkbox-d-ch{ background-position: 0 -99px; width: 13px; height: 13px; }
+/* form icons end */
+
+/* stars */
+[class|="icon-rstar"],
+.icon-star,
+[class*=" icon-rstar-"]{background:url(../img/sprite-rating.png) 0 0 no-repeat;}
+/* stars end */
+
+/* corners */
+[class|="corner"],
+[class*=" corner-"] {background:url(../img/sprite-corners.png) 0 0 no-repeat;}
+/* corners end */
