@@ -1074,14 +1074,17 @@ div.cselect .ui-multiselect-checkboxes label.ui-state-active{
 }
 .scrollable .scroll-bar{
 	display: none;
+	border-radius: 3px;
 }
 .scrollable .scroll-bar.vertical{
 	position: absolute;
-	right: 7px;
+	right: 6px;
 	top: 7px;
 	bottom: 7px;
 	height: auto !important;
 	background: rgba(67,81,94,0.35);
+	box-shadow: 0 -3px 0 rgba(67,81,94,0.35),
+	0 3px 0 rgba(67,81,94,0.35);
 }
 .scrollable .scroll-bar.horizontal{
 	position: relative;

@@ -42,7 +42,44 @@ function yandexMap(){
 				myMap.controls.add('zoomControl', {top: '10px', left:'10px', height: '50px'});
 				myMap.geoObjects.add(myPlacemark);
 			});
-
+		});
+	}
+	var mainMapYandex = $('.main-map');
+	if ( mainMapYandex.length ) {
+		mainMapYandex.each(function(index){
+			var obj = $(this);
+			var objIndex = index + 1;
+			var className = obj.attr('class');
+			obj.attr('id', 'map-'+objIndex);
+			var id = obj.attr('id');
+			var latitude = obj.data('latitude');
+			var longitude = obj.data('longitude');
+			var zoom = obj.data('zoom');
+			//console.log(objIndex);
+			ymaps.ready(function () {
+				// Create map
+				var myMap = new ymaps.Map(id, {
+					center: [latitude, longitude],
+					zoom: zoom,
+					scrollwheel: false
+				});
+				var myPlacemark = new ymaps.Placemark([latitude, longitude],{
+					//hintContent: 'Name',
+					//help_hint: 'Name',
+					//balloonContent: '<div>Name</div>',
+					balloonContentHeader: "Балун метки",
+					balloonContentBody: "Содержимое <em>балуна</em> метки",
+					balloonContentFooter: "Подвал",
+					hintContent: "Хинт метки"
+				}, {
+					iconImageHref: './img/map-pin.png',
+					iconImageSize: [71, 108],
+					iconImageOffset: [-37, -106]
+				});
+				// Add buttons and placemarks
+				myMap.controls.add('zoomControl', {top: '10px', left:'10px', height: '50px'});
+				myMap.geoObjects.add(myPlacemark);
+			});
 		});
 	}
 }
