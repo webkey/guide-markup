@@ -356,6 +356,7 @@ input[type="checkbox"]{ width: 16px; height: 16px; padding: 0; margin: 0; }
 .run-item,
 .run-img a,
 .run-img img,
+.switch-menu,
 .transition{
 	-webkit-transition: 0.2s;
 	transition: 0.2s;
@@ -1509,16 +1510,93 @@ input[type="checkbox"]{ width: 16px; height: 16px; padding: 0; margin: 0; }
 	position: relative;
 	overflow: hidden;
 }
-.main-map{
+.main-map-holder .main-map{
 	height: 100%;
 }
+/*search map form*/
+.search-map-form{
+	width: 316px;
+	height: 46px;
+	position: absolute;
+	top: 0;
+	right: 90px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.20);
+	border-radius: 3px;
+}
+.search-map-form form{
+	float: left;
+	width: 100%;
+	border-radius: 3px;
+}
+.search-map-form:before,
+.search-map-form:after { content: ""; display: table; }
+.search-map-form:after { clear: both; }
+.search-map-form .input-wrapper{
+	position: relative;
+	width: 100%;
+}
+.search-map-form input[type="search"],
+.search-map-form input[type="text"]{
+	display: block;
+	width: 100%;
+	height: 46px;
+	border: 1px solid #fff;
+	background: rgba(255,255,255, 0.76);
+	font-size: 16px;
+	line-height: 46px;
+	color: #43515e;
+	padding: 0 45px 0 12px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+	backface-visibility: hidden;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	border-radius: 3px;
+}
+.search-map-form input[type="search"]:focus,
+.search-map-form input[type="text"]:focus{
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.40);
+	background: #fff;
+}
+.search-map-form .btn-search{
+	position: absolute;
+	right: 16px;
+	top: 13px;
+	z-index: 9;
+}
+.search-map-form .btn-search:hover{
+	opacity: 0.85;
+}
+/*search map form end*/
 /*map menu*/
 .map-menu{
 	width: 601px;
 	float: right;
 	height: 100%;
 	position: relative;
+	z-index: 1;
 }
+/*switch menu button*/
+.switch-menu{
+	position: absolute;
+	right: 100%;
+	top: 0;
+	width: 75px;
+	height: 48px;
+	text-decoration: none;
+	text-align: center;
+	border-bottom-left-radius: 3px;
+	background: #e9025f;
+	cursor: pointer;
+	padding-top: 17px;
+}
+.switch-menu:hover{
+	background: #d5025b;
+}
+/*switch menu button end*/
 /*menu head*/
 .menu-head{
 	position: absolute;
@@ -1563,7 +1641,7 @@ input[type="checkbox"]{ width: 16px; height: 16px; padding: 0; margin: 0; }
 	text-transform: uppercase;
 	position: relative;
 	color: #43515e;
-	padding: 18px 19px;
+	padding: 16px 19px;
 	margin: 17px -29px 17px -19px;
 }
 .group-title:first-child,
