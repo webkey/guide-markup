@@ -1,3 +1,6 @@
 ﻿.scrollable.default-skin .scroll-bar .thumb{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7e9e9', endColorstr='#fbfbfc',GradientType=1 );
 }
+.map-menu .scrollable .viewport:after{
+	background: url(../img/grad-opacity.png) repeat-x;
+}

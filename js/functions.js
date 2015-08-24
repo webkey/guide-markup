@@ -107,9 +107,22 @@ function initScrollpanel() {
 		hScroll: false,
 		updateOnWindowResize: true
 	});
-	//$(".scrollpanel").customScrollbar("resize", true)
 }
 /*initial scrollpanel end*/
+
+/*menu padding size*/
+function paddingSize(){
+	var boxTop = $('.js-box-top'),
+		boxCenter = $('.js-box-center'),
+		boxBottom = $('.js-box-bottom');
+	var boxTopHeight = boxTop.outerHeight(),
+		boxBottomHeight = boxBottom.outerHeight();
+	boxCenter.css({
+		'padding-top': boxTopHeight,
+		'padding-bottom': boxBottomHeight
+	});
+}
+/*menu padding size end*/
 
 /** ready/load/resize document **/
 
@@ -117,5 +130,6 @@ $(document).ready(function(){
 	placeholderInit();
 	yandexMap();
 	fancybox();
+	paddingSize();
 	initScrollpanel();
 });
