@@ -19,6 +19,21 @@
 	z-index: 99;
 	border:0;
 }
+/*btn-default*/
+[class*="btn-default"]{
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: -0.02em;
+	font-weight: 600;
+	color: #eeeef0;
+	padding: 7px 14px 9px;
+	background: #e9025f;
+	border-radius: 3px;
+}
+[class*="btn-default"]:hover{
+	background: #ae1768;
+}
+/*btn-default end*/
 /*btn-menu*/
 [class*="btn-menu"]{
 	font-size: 20px;
@@ -28,11 +43,6 @@
 	text-transform: uppercase;
 	padding: 18px 5px;
 	background: #e9025f;
-	-webkit-transition: 0.2s;
-	transition: 0.2s;
-	backface-visibility: hidden;
-	-webkit-transform: translateZ(0);
-	transform: translateZ(0);
 }
 [class*="btn-menu"][class*="icon-"]{
 	vertical-align: middle;
