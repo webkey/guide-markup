@@ -15,21 +15,31 @@
 .icon-road-white{ background-position: 0 -476px; width: 23px; height: 27px; }
 .icon-review-white{ background-position: 0 -523px; width: 25px; height: 20px; }
 .icon-chat-gray{ background-position: 0 -563px; width: 20px; height: 17px; }
-.icon-car-white{ background-position: 0 -600px; width: 26px; height: 20px; }
 .icon-car-gray{ background-position: 0 -640px; width: 26px; height: 20px; }
 .icon-car-dark{ background-position: 0 -680px; width: 26px; height: 20px; }
-.icon-horse-white{ background-position: 0 -720px; width: 23px; height: 26px; }
+:hover>.icon-car-dark,
+.active .icon-car-dark,
+.icon-car-white{ background-position: 0 -600px; width: 26px; height: 20px; }
 .icon-horse-sm-gray{ background-position: 0 -766px; width: 19px; height: 21px; }
 .icon-horse-dark{ background-position: 0 -807px; width: 23px; height: 26px; }
-.icon-walk-white{ background-position: 0 -853px; width: 22px; height: 33px; }
+:hover>.icon-horse-dark,
+.active .icon-horse-dark,
+.icon-horse-white{ background-position: 0 -720px; width: 23px; height: 26px; }
 .icon-walk-sm-gray{ background-position: 0 -906px; width: 16px; height: 24px; }
 .icon-walk-dark{ background-position: 0 -950px; width: 22px; height: 33px; }
+:hover>.icon-walk-dark,
+.active .icon-walk-dark,
+.icon-walk-white{ background-position: 0 -853px; width: 22px; height: 33px; }
 .icon-clock-white{ background-position: 0 -1003px; width: 22px; height: 22px; }
 .icon-clock-gray{ background-position: 0 -1045px; width: 22px; height: 22px; }
-.icon-local-white{ background-position: 0 -1087px; width: 23px; height: 27px; }
 .icon-local-dark{ background-position: 0 -1134px; width: 23px; height: 27px; }
-.icon-view-white{ background-position: 0 -1181px; width: 28px; height: 28px; }
+:hover>.icon-local-dark,
+.active .icon-local-dark,
+.icon-local-white{ background-position: 0 -1087px; width: 23px; height: 27px; }
 .icon-view-dark{ background-position: 0 -1229px; width: 28px; height: 28px; }
+:hover>.icon-view-dark,
+.active .icon-view-dark,
+.icon-view-white{ background-position: 0 -1181px; width: 28px; height: 28px; }
 .icon-print-white{ background-position: 0 -1277px; width: 21px; height: 19px; }
 .icon-close-white{ background-position: 0 -1316px; width: 13px; height: 13px; }
 .icon-delete-white{ background-position: 0 -1349px; width: 29px; height: 29px; }
@@ -58,16 +68,28 @@
 .icon-magnifier-white{ background-position: -61px -456px; width: 22px; height: 22px; }
 .icon-magnifier-sm-gray{ background-position: -61px -498px; width: 20px; height: 20px; }
 .icon-food-dark{ background-position: -61px -538px; width: 21px; height: 37px; }
+a:hover .icon-food-dark,
+.active .icon-food-dark,
 .icon-food-pink{ background-position: -61px -595px; width: 21px; height: 37px; }
 .icon-gas-dark{ background-position: -61px -652px; width: 27px; height: 33px; }
+a:hover .icon-gas-dark,
+.active .icon-gas-dark,
 .icon-gas-pink{ background-position: -61px -705px; width: 27px; height: 33px; }
 .icon-farmacy-dark{ background-position: -61px -758px; width: 34px; height: 33px; }
+a:hover .icon-farmacy-dark,
+.active .icon-farmacy-dark,
 .icon-farmacy-pink{ background-position: -61px -811px; width: 34px; height: 33px; }
 .icon-airport-dark{ background-position: -61px -864px; width: 27px; height: 31px; }
+a:hover .icon-airport-dark,
+.active .icon-airport-dark,
 .icon-airport-pink{ background-position: -61px -915px; width: 27px; height: 31px; }
 .icon-museum-dark{ background-position: -61px -966px; width: 32px; height: 32px; }
+a:hover .icon-museum-dark,
+.active .icon-museum-dark,
 .icon-museum-pink{ background-position: -61px -1018px; width: 32px; height: 32px; }
 .icon-station-dark{ background-position: -61px -1070px; width: 26px; height: 31px; }
+a:hover .icon-station-dark,
+.active .icon-station-dark,
 .icon-station-pink{ background-position: -61px -1121px; width: 26px; height: 31px; }
 .icon-menu-white{ background-position: -61px -1172px; width: 28px; height: 11px; }
 .icon-arrow-b-gray{ background-position: -61px -1203px; width: 11px; height: 11px; }
