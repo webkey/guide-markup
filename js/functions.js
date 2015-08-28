@@ -116,8 +116,7 @@ function initScrollpanel() {
 		}
 	});
 }
-function initScrollpanelForTabs() {
-	var scrollpanelElement = $(".tabs-container");
+function initScrollpanelForTabs(scrollpanelElement) {
 	scrollpanelElement.customScrollbar({
 		skin: "default-skin",
 		hScroll: false,
@@ -135,12 +134,10 @@ function initScrollpanelForTabs() {
 
 /*menu padding size*/
 function paddingSize(){
-	var boxTop = $('.js-box-top'),
-		boxCenter = $('.js-box-center'),
-		boxBottom = $('.js-box-bottom');
-	var boxTopHeight = boxTop.outerHeight(),
-		boxBottomHeight = boxBottom.outerHeight();
-	boxCenter.css({
+	var boxTopHeight = $('.js-box-top').outerHeight(),
+		boxBottomHeight = $('.js-box-bottom').outerHeight();
+	console.log(boxBottomHeight);
+	$('.js-box-center').css({
 		'padding-top': boxTopHeight,
 		'padding-bottom': boxBottomHeight
 	});
@@ -156,9 +153,11 @@ function tabInit(){
 			//hide: { effect: "fade", duration: 300 },
 			create: function( event, ui ) {
 				currentTabPanel($(ui.panel));
+				initScrollpanelForTabs($(ui.panel));
 			},
 			activate: function( event, ui ) {
 				currentTabPanel($(ui.newPanel), $(ui.oldPanel));
+				initScrollpanelForTabs($(ui.newPanel));
 			}
 		});
 		function currentTabPanel(current, old){
@@ -171,13 +170,22 @@ function tabInit(){
 }
 /*tabs initial end*/
 
+/*height tabs*/
+function heightTabs(){
+	$('.run-specification-info .tabs').height('100');
+}
+/*height tabs end*/
+
 /** ready/load/resize document **/
 
 $(document).ready(function(){
 	placeholderInit();
-	//yandexMap();
+	yandexMap();
 	fancybox();
+	tabInit();
+});
+$(window).load(function(){
+	//heightTabs();
 	paddingSize();
 	initScrollpanel();
-	tabInit();
 });

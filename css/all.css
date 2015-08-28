@@ -2024,7 +2024,9 @@ input[type="checkbox"]{ width: 16px; height: 16px; padding: 0; margin: 0; }
 	height: 100%;
 	box-shadow: -1px 0 0 #eaeced;
 }
-.menu-content-holder{ height: 100%; }
+.menu-content-holder{
+	height: 100%;
+}
 .menu-content-frame{ padding: 17px 29px 17px 19px; }
 .map-menu .scrollable.default-skin{
 	padding-right: 0;
@@ -2121,7 +2123,7 @@ input[type="checkbox"]{ width: 16px; height: 16px; padding: 0; margin: 0; }
 }
 .run-content{
 	overflow: hidden;
-	padding: 13px 0 0;
+	padding: 13px 10px 0 0;
 }
 .run-title{
 	display: block;
@@ -2130,7 +2132,7 @@ input[type="checkbox"]{ width: 16px; height: 16px; padding: 0; margin: 0; }
 	letter-spacing: -0.03em;
 	color: #43515e;
 	text-transform: uppercase;
-	padding: 0 40px 8px 0;
+	padding: 0 30px 8px 0;
 }
 .run-more{
 	padding: 0 0 16px;
@@ -2354,12 +2356,14 @@ input[type="checkbox"]{ width: 16px; height: 16px; padding: 0; margin: 0; }
 .tabs{
 	padding: 0 0 12px;
 	height: 280px;
-	overflow: auto;
 }
-.tabs.scrollable.default-skin {
+.tabs>div{
+	height: 100%;
+}
+.tabs .scrollable.default-skin {
 	padding-right: 15px;
 }
-.tabs.scrollable .scroll-bar.vertical{
+.tabs .scrollable .scroll-bar.vertical{
 	right: 0;
 }
 .run-info-title{
@@ -2394,6 +2398,7 @@ input[type="checkbox"]{ width: 16px; height: 16px; padding: 0; margin: 0; }
 }
 .run-info-title .in-route{
 	float: right;
+	max-width: 40%;
 }
 .run-specification-info .opinions-list {
 	padding: 7px 0 0;
@@ -2403,6 +2408,11 @@ input[type="checkbox"]{ width: 16px; height: 16px; padding: 0; margin: 0; }
 }
 .run-sked .short-info-row{
 	overflow: hidden;
+	border-bottom: none;
+	border-top: 1px solid #eee;
+}
+.run-sked .short-info-row:first-child{
+	border: none;
 }
 .run-sked .short-info-row:before,
 .run-sked .short-info-row:after{
@@ -2422,9 +2432,10 @@ input[type="checkbox"]{ width: 16px; height: 16px; padding: 0; margin: 0; }
 	padding-left: 18px;
 }
 .run-specification-footer .btn-more{
-	min-width: 212px;
-	padding-top: 25px;
-	padding-bottom: 22px;
+	width: 39.1%;
+	padding-top: 0;
+	padding-bottom: 0;
+	height: 61px;
 	float: right;
 }
 .run-specification-footer .data-list{
@@ -2622,5 +2633,24 @@ input[type="checkbox"]{ width: 16px; height: 16px; padding: 0; margin: 0; }
 	}
 	.sidebar-menu > li > a:hover .text-inner{
 		opacity: 1;
+	}
+
+	.map-menu{
+		width: 436px;
+	}
+	.run-img{
+		margin-right: 10px;
+		border-bottom-left-radius: 0;
+	}
+	.run-img img{
+		border-bottom-left-radius: 0;
+	}
+	.run-item .data-list{
+		overflow: visible;
+		float: left;
+		width: 100%;
+	}
+	.run-specification{
+		width: 400px;
 	}
 }

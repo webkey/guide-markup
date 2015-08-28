@@ -37,11 +37,12 @@
 /*btn-menu*/
 [class*="btn-menu"]{
 	font-size: 20px;
-	line-height: 22px;
+	line-height: 24px;
 	font-family: 'kelson-sans-bold-bg', Arial, Helvetica, sans-serif;
 	color: #fff;
 	text-transform: uppercase;
-	padding: 18px 5px;
+	padding: 17px 5px 16px;
+	min-height: 24px;
 	background: #e9025f;
 }
 [class*="btn-menu"] [class*="icon-"]{
@@ -58,23 +59,39 @@
 }
 /*btn-menu end*/
 [class*="btn-more"]{
-	font-size: 12px;
-	line-height: 14px;
+	line-height: 15px;
 	font-weight: 600;
-	letter-spacing: -0.03em;
 	color: #fff;
 	text-transform: uppercase;
 	padding: 18px 5px;
 	background: #43515e;
+	font-size: 0;
+	letter-spacing: -4px;
+}
+[class*="btn-more"]>*{
+	font-size: 12px;
+	letter-spacing: normal;
+}
+[class*="btn-more"]:after{
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-left: -1px;
+	width: 1px;
+	background-color: #f00;
 }
 [class*="btn-more"] [class*="icon-"]{
 	vertical-align: middle;
+	font-size: 12px;
 	margin: 0 5px 0 0;
 }
 [class*="btn-more"] .text-inner{
 	vertical-align: middle;
 	display: inline-block;
 	max-width: 70%;
+	letter-spacing: -0.03em;
+	margin-top: 4px;
 }
 [class*="btn-more"]:hover{
 	background: #211f22;
