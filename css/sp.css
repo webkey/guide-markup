@@ -7,6 +7,7 @@
 .icon-star-pink{ background-position: 0 -122px; width: 21px; height: 20px; }
 .icon-star-pink-full{ background-position: 0 -162px; width: 21px; height: 20px; }
 .icon-star-lg{ background-position: 0 -202px; width: 41px; height: 41px; }
+.tick>.icon-star-lg,
 .icon-star-lg-full{ background-position: 0 -263px; width: 41px; height: 41px; }
 .icon-price-white{ background-position: 0 -324px; width: 25px; height: 17px; }
 .icon-price-gray{ background-position: 0 -361px; width: 25px; height: 17px; }
@@ -17,27 +18,27 @@
 .icon-chat-gray{ background-position: 0 -563px; width: 20px; height: 17px; }
 .icon-car-gray{ background-position: 0 -640px; width: 26px; height: 20px; }
 .icon-car-dark{ background-position: 0 -680px; width: 26px; height: 20px; }
-:hover>.icon-car-dark,
+.btn-map:hover>.icon-car-dark,
 .active .icon-car-dark,
 .icon-car-white{ background-position: 0 -600px; width: 26px; height: 20px; }
 .icon-horse-sm-gray{ background-position: 0 -766px; width: 19px; height: 21px; }
 .icon-horse-dark{ background-position: 0 -807px; width: 23px; height: 26px; }
-:hover>.icon-horse-dark,
+.btn-map:hover>.icon-horse-dark,
 .active .icon-horse-dark,
 .icon-horse-white{ background-position: 0 -720px; width: 23px; height: 26px; }
 .icon-walk-sm-gray{ background-position: 0 -906px; width: 16px; height: 24px; }
 .icon-walk-dark{ background-position: 0 -950px; width: 22px; height: 33px; }
-:hover>.icon-walk-dark,
+.btn-map:hover>.icon-walk-dark,
 .active .icon-walk-dark,
 .icon-walk-white{ background-position: 0 -853px; width: 22px; height: 33px; }
 .icon-clock-white{ background-position: 0 -1003px; width: 22px; height: 22px; }
 .icon-clock-gray{ background-position: 0 -1045px; width: 22px; height: 22px; }
 .icon-local-dark{ background-position: 0 -1134px; width: 23px; height: 27px; }
-:hover>.icon-local-dark,
+.btn-map:hover>.icon-local-dark,
 .active .icon-local-dark,
 .icon-local-white{ background-position: 0 -1087px; width: 23px; height: 27px; }
 .icon-view-dark{ background-position: 0 -1229px; width: 28px; height: 28px; }
-:hover>.icon-view-dark,
+.btn-map:hover>.icon-view-dark,
 .active .icon-view-dark,
 .icon-view-white{ background-position: 0 -1181px; width: 28px; height: 28px; }
 .icon-print-white{ background-position: 0 -1277px; width: 21px; height: 19px; }

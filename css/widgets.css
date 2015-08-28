@@ -1080,8 +1080,8 @@ div.cselect .ui-multiselect-checkboxes label.ui-state-active{
 .scrollable .scroll-bar.vertical{
 	position: absolute;
 	right: 6px;
-	top: 7px;
-	bottom: 7px;
+	top: 0;
+	bottom: 0;
 	height: auto !important;
 	background: rgba(67,81,94,0.35);
 	box-shadow: 0 -3px 0 rgba(67,81,94,0.35),

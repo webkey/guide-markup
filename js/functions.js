@@ -102,10 +102,33 @@ function fancybox(){
 
 /*initial scrollpanel*/
 function initScrollpanel() {
-	$('.scrollpanel').customScrollbar({
+	var scrollpanelElement = $(".scrollpanel");
+	scrollpanelElement.customScrollbar({
 		skin: "default-skin",
 		hScroll: false,
 		updateOnWindowResize: true
+	});
+	scrollpanelElement.on("customScroll", function(event, scrollData) {
+		if(scrollData.scrollPercent > 99){
+			$(event.currentTarget).addClass('direction-down');
+		} else {
+			$(event.currentTarget).removeClass('direction-down');
+		}
+	});
+}
+function initScrollpanelForTabs() {
+	var scrollpanelElement = $(".tabs-container");
+	scrollpanelElement.customScrollbar({
+		skin: "default-skin",
+		hScroll: false,
+		updateOnWindowResize: true
+	});
+	scrollpanelElement.on("customScroll", function(event, scrollData) {
+		if(scrollData.scrollPercent > 99){
+			$(event.currentTarget).addClass('direction-down');
+		} else {
+			$(event.currentTarget).removeClass('direction-down');
+		}
 	});
 }
 /*initial scrollpanel end*/
@@ -124,12 +147,37 @@ function paddingSize(){
 }
 /*menu padding size end*/
 
+/*tabs initial*/
+function tabInit(){
+	$(function() {
+		$( ".tabs-wrap" ).tabs({
+			//active: 2,
+			//show: { effect: "fade", duration: 300 },
+			//hide: { effect: "fade", duration: 300 },
+			create: function( event, ui ) {
+				currentTabPanel($(ui.panel));
+			},
+			activate: function( event, ui ) {
+				currentTabPanel($(ui.newPanel), $(ui.oldPanel));
+			}
+		});
+		function currentTabPanel(current, old){
+			if(current === undefined){ return; }
+			current.addClass('current-panel');
+			if(old === undefined){ return; }
+			old.removeClass('current-panel');
+		}
+	});
+}
+/*tabs initial end*/
+
 /** ready/load/resize document **/
 
 $(document).ready(function(){
 	placeholderInit();
-	yandexMap();
+	//yandexMap();
 	fancybox();
 	paddingSize();
 	initScrollpanel();
+	tabInit();
 });
