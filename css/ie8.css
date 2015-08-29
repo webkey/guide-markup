@@ -10,3 +10,6 @@
 .place-img .mask.complete{
 	background: url(../img/grad-mask.png) repeat-y bottom 0;
 }
+.run-filters{
+	background: #f7fbfd;
+}

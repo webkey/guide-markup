@@ -17,7 +17,6 @@ function yandexMap(){
 			var latitude = obj.data('latitude');
 			var longitude = obj.data('longitude');
 			var zoom = obj.data('zoom');
-			//console.log(objIndex);
 			ymaps.ready(function () {
 				// Create map
 				var myMap = new ymaps.Map(id, {
@@ -55,7 +54,6 @@ function yandexMap(){
 			var latitude = obj.data('latitude');
 			var longitude = obj.data('longitude');
 			var zoom = obj.data('zoom');
-			//console.log(objIndex);
 			ymaps.ready(function () {
 				// Create map
 				var myMap = new ymaps.Map(id, {
@@ -107,6 +105,17 @@ function fancybox(){
 }
 /* fancybox end */
 
+/* checkbox/radiobox */
+function checkbox(){
+	$('.def-ch').checkbox({
+		cls:'jquery-checkbox'
+	});
+	$('.def-radio').checkbox({
+		cls:'jquery-radiobox'
+	});
+}
+/* checkbox/radiobox end */
+
 /*initial scrollpanel*/
 function initScrollpanel(scrollpanelElement) {
 	//var scrollpanelElement = $(".scrollpanel");
@@ -151,51 +160,43 @@ function initScrollpanelForTabs(scrollpanelElement) {
 			parentScrillbar.addClass('direction-down');
 		}
 	});
-	console.log('initScrollpanelForTabs');
 }
 /*initial scrollpanel end*/
 
-/*open/close map menu*/
-function openMapMenu(){
-	if (!$('.map-menu').length) {return;}
-	$('body').on('click', '.switch-button', function (e) {
-		e.preventDefault();
-		var thisBtn = $(this);
-		thisBtn
-			.closest('.map-menu')
-			.find('.map-menu-content')
-			.slideToggle(0, function () {
-				thisBtn.toggleClass('closed');
-			});
-	})
-}
-/*open/close main map menu end*/
-
 /*open/close additional panels*/
 function openAddPanel() {
-	var hideElement = $('.run-specification, .run-specification-item');
+	var hideElement = $('.run-specification, .run-specification-item, .additional-panel');
 	hideElement.hide(0);
 	$('body').on('click', '[data-open]', function (e) {
 		e.preventDefault();
 		var currentBtn = $(this),
 			dataOpen = currentBtn.data('open'),
 			addPanel = $('#'+dataOpen);
-		if (!addPanel.is(':hidden')) {
-			console.warn("THIS PANEL'S INFORMATION IS VISIBLE!");
+		if (currentBtn.attr('data-text-close') && addPanel.is(':visible')) {
+			addPanel.fadeOut(0, function () {
+				currentBtn.find('.text-inner').text(currentBtn.data('text-open'));
+				currentBtn.removeClass('opened');
+				//console.warn("BOOO!");
+			});
 			return;
 		}
+		if (!addPanel.is(':hidden')) { return; }
+		if (currentBtn.attr('data-text-close') && !addPanel.is(':visible')) {
+			currentBtn.addClass('opened');
+			currentBtn.find('.text-inner').text(currentBtn.data('text-close'));
+		}
 		addPanel.parent().fadeIn(0, function () {
-			addPanel.siblings().hide(0);
-			addPanel.fadeIn('fast', function () {
-				heightTabs(addPanel.find('.tabs'));
+			addPanel.siblings().filter('*:not(".additional-panel")').hide(0);
+			addPanel.fadeIn(0, function () {
+				if(addPanel.hasClass('run-specification-item')){
+					heightTabs(addPanel.find('.tabs'));
+				}
 				initScrollpanelForTabs(addPanel.find('.tabs').children('div'))
 			});
 		});
-		console.log('openAddPanel: ', dataOpen);
 	});
 	$('body').on('click', '.run-specification-title', function (e) {
 		e.preventDefault();
-		$(this).parent('.additional-panel').hide(0);
 		$(this).closest('.additional-panel').hide(0);
 	})
 }
@@ -224,16 +225,13 @@ function heightTabs(tabs){
 			paddingBottom = tabs.data('padding-bottom'),
 			paddingTop = tabs.data('padding-top');
 		tabs.css('height', footerOffsetTop - tabsOffsetTop - paddingBottom - paddingTop);
-		console.log('heightTabs before - ' + tabsOffsetTop + ' - ' + footerOffsetTop + ' - ' + (footerOffsetTop - tabsOffsetTop - paddingBottom - paddingTop) + '');
 		tabs.closest('.tab-wrap').tabs( "refresh" );
-		console.log('heightTabs before - ' + tabsOffsetTop + ' - ' + footerOffsetTop + ' - ' + (footerOffsetTop - tabsOffsetTop - paddingBottom - paddingTop) + '');
 	})
 }
 /*height tabs end*/
 
 /*tabs initial*/
 function tabInit(){
-	console.log('tabInit before');
 	var tabsWrapper = $(".tabs-wrap");
 	if (!tabsWrapper.length) {return;}
 	tabsWrapper.tabs({
@@ -244,14 +242,12 @@ function tabInit(){
 			currentTabPanel($(ui.panel));
 			if($(ui.panel).is(':visible')){
 				initScrollpanelForTabs($(ui.panel));
-				console.log('------tabCreate');
 			}
 		},
 		activate: function( event, ui ) {
 			currentTabPanel($(ui.newPanel), $(ui.oldPanel));
 			if($(ui.newPanel).is(':visible')){
 				initScrollpanelForTabs($(ui.newPanel));
-				console.log('------tabAfter');
 			}
 		}
 	});
@@ -263,7 +259,6 @@ function tabInit(){
 		if(old === undefined){ return; }
 		old.removeClass('current-panel');
 	}
-	console.log('tabInit after');
 }
 /*tabs initial end*/
 
@@ -297,28 +292,15 @@ function routesTypes(){
 }
 /*routes types end*/
 
-/*remove run item*/
-function removeRunItem(){
-	$('[class*="icon-delete"]').on('click', function () {
-		var thisBtn = $(this);
-		var removingElement = thisBtn.closest('.run-item');
-		removingElement.fadeOut('normal', function () {
-			removingElement.remove();
-		})
-	})
-}
-/*remove run item end*/
-
 /** ready/load/resize document **/
 
 $(document).ready(function(){
 	placeholderInit();
 	yandexMap();
 	fancybox();
+	checkbox();
 	routesTypes();
-	//openMapMenu();
 	openAddPanel();
-	removeRunItem();
 });
 $(window).load(function(){
 	heightTabs($('.run-specification-info .tabs'));
