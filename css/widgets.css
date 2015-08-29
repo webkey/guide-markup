@@ -120,11 +120,17 @@
 	text-shadow: none;
 	border-radius: 4px;
 }
+.change-run-popup-wrap .fancybox-skin{
+	background: #fff;
+}
 .fancybox-opened{
 	z-index: 8030;
 }
 .fancybox-opened .fancybox-skin{
 	box-shadow: 0 4px 18px rgba(0, 0, 0, 0.78);
+}
+.change-run-popup-wrap.fancybox-opened .fancybox-skin{
+	box-shadow: 10px 11px 0 rgba(0, 0, 0, 0.20);
 }
 .fancybox-outer, .fancybox-inner{
 	position: relative;
@@ -185,6 +191,9 @@
 	backface-visibility: hidden;
 	-webkit-transform: translateZ(0);
 	transform: translateZ(0);
+}
+.change-run-popup-wrap .fancybox-close{
+	display: none;
 }
 .fancybox-close:hover{
 	background-color: #cf025d;

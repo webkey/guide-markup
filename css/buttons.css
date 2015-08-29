@@ -33,29 +33,40 @@
 [class*="btn-default"]:hover{
 	background: #ae1768;
 }
+[class*="btn-default"]:active{
+	box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.18);
+}
 /*btn-default end*/
 /*btn-menu*/
-[class*="btn-menu"]{
+[class*="btn-default"][class*="-lg"]{
 	font-size: 20px;
 	line-height: 24px;
 	font-family: 'kelson-sans-bold-bg', Arial, Helvetica, sans-serif;
 	color: #fff;
 	text-transform: uppercase;
-	padding: 17px 5px 16px;
+	padding: 17px 10px 16px;
 	min-height: 24px;
-	background: #e9025f;
 }
-[class*="btn-menu"] [class*="icon-"]{
+[class*="btn-default"][class*="-lg"] [class*="icon-"]{
 	vertical-align: middle;
 	margin: 0 10px 0 0;
 }
-[class*="btn-menu"] .text-inner{
+[class*="btn-default"][class*="-lg"] .text-inner{
 	vertical-align: middle;
 	display: inline-block;
 	max-width: 70%;
 }
-[class*="btn-menu"]:hover{
-	background: #d5025b;
+[class*="btn-default"][class*="-lg"]:hover{
+	background: #ff0270;
+	padding-right: 15px;
+	padding-left: 5px;
+}
+
+[class*="btn-default"][class*="-lg"][class*="-dark"]{
+	background: #ae1768;
+}
+[class*="btn-default"][class*="-lg"][class*="-dark"]:hover{
+	background: #ce1885;
 }
 /*btn-menu end*/
 [class*="btn-more"]{
@@ -79,7 +90,6 @@
 	vertical-align: middle;
 	margin-left: -1px;
 	width: 1px;
-	background-color: #f00;
 }
 [class*="btn-more"] [class*="icon-"]{
 	vertical-align: middle;

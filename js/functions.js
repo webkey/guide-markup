@@ -64,9 +64,6 @@ function yandexMap(){
 					scrollwheel: false
 				});
 				var myPlacemark = new ymaps.Placemark([latitude, longitude],{
-					//hintContent: 'Name',
-					//help_hint: 'Name',
-					//balloonContent: '<div>Name</div>',
 					balloonContentHeader: "Балун метки",
 					balloonContentBody: "Содержимое <em>балуна</em> метки",
 					balloonContentFooter: "Подвал",
@@ -97,6 +94,16 @@ function fancybox(){
 			closeEffect: 'none'
 		});
 	}
+	/*change map popup*/
+	var changeRunPopupOpen = $('.change-popup-open');
+	if (changeRunPopupOpen.length) {
+		changeRunPopupOpen.fancybox({
+			wrapCSS: 'change-run-popup-wrap',
+			padding: 0,
+			openEffect: 'elastic',
+			closeEffect: 'elastic'
+		});
+	}
 }
 /* fancybox end */
 
@@ -115,6 +122,12 @@ function initScrollpanel() {
 			$(event.currentTarget).removeClass('direction-down');
 		}
 	});
+	$('.scroll-bar.vertical').each(function () {
+		var currentScrollBar = $(this);
+		if (currentScrollBar.is(':hidden')){
+			currentScrollBar.closest('.scrollable').addClass('direction-down');
+		}
+	})
 }
 function initScrollpanelForTabs(scrollpanelElement) {
 	scrollpanelElement.customScrollbar({
@@ -129,14 +142,67 @@ function initScrollpanelForTabs(scrollpanelElement) {
 			$(event.currentTarget).removeClass('direction-down');
 		}
 	});
+	var scrollBar = scrollpanelElement.find('.scroll-bar.vertical');
+	$.each(scrollBar, function () {
+		var currentScrollBar = $(this),
+			parentScrillbar = currentScrollBar.closest('.scrollable');
+		parentScrillbar.removeClass('direction-down');
+		if (currentScrollBar.is(':hidden')){
+			parentScrillbar.addClass('direction-down');
+		}
+	});
+	console.log('initScrollpanelForTabs');
 }
 /*initial scrollpanel end*/
+
+/*open/close map menu*/
+function openMapMenu(){
+	if (!$('.map-menu').length) {return;}
+	$('body').on('click', '.switch-button', function (e) {
+		e.preventDefault();
+		var thisBtn = $(this);
+		thisBtn
+			.closest('.map-menu')
+			.find('.map-menu-content')
+			.slideToggle(0, function () {
+				thisBtn.toggleClass('closed');
+			});
+	})
+}
+/*open/close main map menu end*/
+
+/*open/close additional panels*/
+function openAddPanel() {
+	$('body').on('click', '[data-open]', function (e) {
+		e.preventDefault();
+		var currentBtn = $(this),
+			dataOpen = currentBtn.data('open'),
+			addPanel = $('#'+dataOpen);
+		if (!addPanel.is(':hidden')) {
+			console.warn("THIS PANEL'S INFORMATION IS VISIBLE!");
+			return;
+		}
+		addPanel.parent().fadeIn(0, function () {
+			addPanel.siblings().hide(0);
+			addPanel.fadeIn('fast', function () {
+				heightTabs(addPanel.find('.tabs'));
+				initScrollpanelForTabs(addPanel.find('.tabs').children('div'))
+			});
+		});
+		console.log('openAddPanel: ', dataOpen);
+	});
+	$('body').on('click', '.run-specification-title', function (e) {
+		e.preventDefault();
+		$(this).parent('.additional-panel').hide(0);
+		$(this).closest('.additional-panel').hide(0);
+	})
+}
+/*open/close  additional panels end*/
 
 /*menu padding size*/
 function paddingSize(){
 	var boxTopHeight = $('.js-box-top').outerHeight(),
 		boxBottomHeight = $('.js-box-bottom').outerHeight();
-	console.log(boxBottomHeight);
 	$('.js-box-center').css({
 		'padding-top': boxTopHeight,
 		'padding-bottom': boxBottomHeight
@@ -144,37 +210,86 @@ function paddingSize(){
 }
 /*menu padding size end*/
 
+/*height tabs*/
+function heightTabs(tabs){
+	if(!tabs.length){return;}
+	$.each(tabs, function () {
+		tabs = $(this);
+		var parentItem = tabs.closest('.run-specification-item');
+		if (parentItem.is(':hidden')){return;}
+		var tabsOffsetTop = tabs.offset().top,
+			footerOffsetTop = parentItem.find('.run-specification-footer').offset().top,
+			paddingBottom = tabs.data('padding-bottom'),
+			paddingTop = tabs.data('padding-top');
+		tabs.css('height', footerOffsetTop - tabsOffsetTop - paddingBottom - paddingTop);
+		console.log('heightTabs before - ' + tabsOffsetTop + ' - ' + footerOffsetTop + ' - ' + (footerOffsetTop - tabsOffsetTop - paddingBottom - paddingTop) + '');
+		tabInit();
+		console.log('heightTabs before - ' + tabsOffsetTop + ' - ' + footerOffsetTop + ' - ' + (footerOffsetTop - tabsOffsetTop - paddingBottom - paddingTop) + '');
+	})
+}
+/*height tabs end*/
+
 /*tabs initial*/
 function tabInit(){
-	$(function() {
-		$( ".tabs-wrap" ).tabs({
-			//active: 2,
-			//show: { effect: "fade", duration: 300 },
-			//hide: { effect: "fade", duration: 300 },
-			create: function( event, ui ) {
-				currentTabPanel($(ui.panel));
-				initScrollpanelForTabs($(ui.panel));
-			},
-			activate: function( event, ui ) {
-				currentTabPanel($(ui.newPanel), $(ui.oldPanel));
-				initScrollpanelForTabs($(ui.newPanel));
-			}
-		});
-		function currentTabPanel(current, old){
-			if(current === undefined){ return; }
-			current.addClass('current-panel');
-			if(old === undefined){ return; }
-			old.removeClass('current-panel');
+	console.log('tabInit before');
+	var tabsWrapper = $(".tabs-wrap");
+	if (!tabsWrapper.length) {return;}
+	tabsWrapper.tabs({
+		//active: 2,
+		//show: { effect: "fade", duration: 300 },
+		//hide: { effect: "fade", duration: 300 },
+		create: function( event, ui ) {
+			currentTabPanel($(ui.panel));
+			initScrollpanelForTabs($(ui.panel));
+			console.log('    tabCreate');
+		},
+		activate: function( event, ui ) {
+			currentTabPanel($(ui.newPanel), $(ui.oldPanel));
+			initScrollpanelForTabs($(ui.newPanel));
+			console.log('    tabAfter');
 		}
 	});
+
+	tabsWrapper.tabs( "refresh" );
+	function currentTabPanel(current, old){
+		if(current === undefined){ return; }
+		current.addClass('current-panel');
+		if(old === undefined){ return; }
+		old.removeClass('current-panel');
+	}
+	console.log('tabInit after');
 }
 /*tabs initial end*/
 
-/*height tabs*/
-function heightTabs(){
-	$('.run-specification-info .tabs').height('100');
+/*routes types*/
+function routesTypes(){
+	var routesBox = $('.routes-types');
+	if (!routesBox.length) { return; }
+	routesBox.on('click', '.btn-map', function(){
+		var currentBtn = $(this),
+			parentItem = currentBtn.closest('li');
+
+		if(parentItem.hasClass('active')) {return;}
+
+		var distance = parentItem.data('distance'),
+			time = parentItem.data('time'),
+			price = parentItem.data('price'),
+			wrapper = currentBtn.closest('.routes-types'),
+			tooltip = wrapper.find('.info-tooltip-list');
+
+		wrapper.find('.btn-map').closest('li').removeClass('active');
+		parentItem.addClass('active');
+		tooltip.addClass('change', function () {
+			setTimeout(function () {
+				tooltip.find('.tp-distance').text(distance);
+				tooltip.find('.tp-time').text(time);
+				tooltip.find('.tp-price').text(price);
+				tooltip.removeClass('change');
+			}, 200)
+		});
+	})
 }
-/*height tabs end*/
+/*routes types end*/
 
 /** ready/load/resize document **/
 
@@ -182,10 +297,15 @@ $(document).ready(function(){
 	placeholderInit();
 	yandexMap();
 	fancybox();
-	tabInit();
+	routesTypes();
+	//openMapMenu();
+	openAddPanel();
 });
 $(window).load(function(){
-	//heightTabs();
+	heightTabs($('.run-specification-info .tabs'));
 	paddingSize();
 	initScrollpanel();
+});
+$(window).resize(function () {
+	heightTabs($('.run-specification-info .tabs'));
 });
