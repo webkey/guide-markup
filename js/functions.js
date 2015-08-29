@@ -108,8 +108,8 @@ function fancybox(){
 /* fancybox end */
 
 /*initial scrollpanel*/
-function initScrollpanel() {
-	var scrollpanelElement = $(".scrollpanel");
+function initScrollpanel(scrollpanelElement) {
+	//var scrollpanelElement = $(".scrollpanel");
 	scrollpanelElement.customScrollbar({
 		skin: "default-skin",
 		hScroll: false,
@@ -173,6 +173,8 @@ function openMapMenu(){
 
 /*open/close additional panels*/
 function openAddPanel() {
+	var hideElement = $('.run-specification, .run-specification-item');
+	hideElement.hide(0);
 	$('body').on('click', '[data-open]', function (e) {
 		e.preventDefault();
 		var currentBtn = $(this),
@@ -223,7 +225,7 @@ function heightTabs(tabs){
 			paddingTop = tabs.data('padding-top');
 		tabs.css('height', footerOffsetTop - tabsOffsetTop - paddingBottom - paddingTop);
 		console.log('heightTabs before - ' + tabsOffsetTop + ' - ' + footerOffsetTop + ' - ' + (footerOffsetTop - tabsOffsetTop - paddingBottom - paddingTop) + '');
-		tabInit();
+		tabs.closest('.tab-wrap').tabs( "refresh" );
 		console.log('heightTabs before - ' + tabsOffsetTop + ' - ' + footerOffsetTop + ' - ' + (footerOffsetTop - tabsOffsetTop - paddingBottom - paddingTop) + '');
 	})
 }
@@ -240,13 +242,17 @@ function tabInit(){
 		//hide: { effect: "fade", duration: 300 },
 		create: function( event, ui ) {
 			currentTabPanel($(ui.panel));
-			initScrollpanelForTabs($(ui.panel));
-			console.log('    tabCreate');
+			if($(ui.panel).is(':visible')){
+				initScrollpanelForTabs($(ui.panel));
+				console.log('------tabCreate');
+			}
 		},
 		activate: function( event, ui ) {
 			currentTabPanel($(ui.newPanel), $(ui.oldPanel));
-			initScrollpanelForTabs($(ui.newPanel));
-			console.log('    tabAfter');
+			if($(ui.newPanel).is(':visible')){
+				initScrollpanelForTabs($(ui.newPanel));
+				console.log('------tabAfter');
+			}
 		}
 	});
 
@@ -278,18 +284,30 @@ function routesTypes(){
 			tooltip = wrapper.find('.info-tooltip-list');
 
 		wrapper.find('.btn-map').closest('li').removeClass('active');
-		parentItem.addClass('active');
 		tooltip.addClass('change', function () {
 			setTimeout(function () {
 				tooltip.find('.tp-distance').text(distance);
 				tooltip.find('.tp-time').text(time);
 				tooltip.find('.tp-price').text(price);
+				parentItem.addClass('active');
 				tooltip.removeClass('change');
 			}, 200)
 		});
 	})
 }
 /*routes types end*/
+
+/*remove run item*/
+function removeRunItem(){
+	$('[class*="icon-delete"]').on('click', function () {
+		var thisBtn = $(this);
+		var removingElement = thisBtn.closest('.run-item');
+		removingElement.fadeOut('normal', function () {
+			removingElement.remove();
+		})
+	})
+}
+/*remove run item end*/
 
 /** ready/load/resize document **/
 
@@ -300,11 +318,13 @@ $(document).ready(function(){
 	routesTypes();
 	//openMapMenu();
 	openAddPanel();
+	removeRunItem();
 });
 $(window).load(function(){
 	heightTabs($('.run-specification-info .tabs'));
 	paddingSize();
-	initScrollpanel();
+	tabInit();
+	initScrollpanel($(".scrollpanel"));
 });
 $(window).resize(function () {
 	heightTabs($('.run-specification-info .tabs'));

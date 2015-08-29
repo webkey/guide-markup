@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Готовый Маршрут</title>
+	<title>Редактирование Маршрута</title>
 	<!--[if IE]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<!--Mobile optimized-->
 	<meta name="viewport" content="width=1000">
@@ -21,23 +21,29 @@
 	<!--main map-->
 	<div class="main-map-wrap">
 		<!--map menu-->
-		<div class="map-menu">
-			<!--switch menu button-->
+		<div class="map-menu run-edit">
+			<!--button close page-->
+			<a href="#" class="btn-close-page"><i class="icon-delete-opacity"></i></a>
+			<!--button close page end-->
+
+			<!--button switch menu-->
 			<a href="#" class="btn-switch"><i class="icon-menu-white"></i></a>
-			<!--switch menu button end-->
+			<!--button switch menu end-->
 
 			<!--map menu content-->
 			<div class="map-menu-content">
 				<!--map menu title-->
-				<div class="map-menu-title">Готовый маршрут<em class="icon-arrow-b-gray"></em><i class="icon-star-gray-full"></i></div>
+				<div class="map-menu-title">Редактирование маршрута</div>
 				<!--map menu title end-->
 
 				<!--map menu container-->
 				<div class="map-menu-container">
-					<!--menu run ready-->
+					<!--main section-->
 					<div class="main-section">
 						<!--menu head-->
-						<div class="menu-head js-box-top"></div>
+						<div class="menu-head js-box-top">
+							<a href="#">Открыть список мест <i class="icon-places-white"></i></a>
+						</div>
 						<!--menu head end-->
 						<!--menu content-->
 						<div class="menu-content js-box-center">
@@ -46,11 +52,13 @@
 									<div class="group-title">День первый</div>
 									<ul class="run-list">
 										<li class="run-item">
+											<i class="icon-update-pink"></i>
 											<div class="run-img">
 												<a href="#" data-open="run-01">
 													<img src="pic/run/img-run-01.jpg" width="179" height="134" alt="image description" />
 													<span class="run-count">1</span>
 												</a>
+												<div class="mask"><i class="icon-delete-white"></i></div>
 											</div>
 											<div class="run-content">
 												<strong class="run-title">Биг- Бен (Big Ben)</strong>
@@ -76,8 +84,10 @@
 											<span class="label-mark"><i class="icon-star-gray"></i></span>
 										</li>
 										<li class="run-item">
+											<i class="icon-update-pink"></i>
 											<div class="run-img">
 												<a href="#" data-open="run-02"><img src="pic/run/img-run-02.jpg" width="179" height="134" alt="image description" /><span class="run-count">2</span></a>
+												<div class="mask"><i class="icon-delete-white"></i></div>
 											</div>
 											<div class="run-content">
 												<strong class="run-title">Тауэрский мост (Tower Bridge)</strong>
@@ -103,8 +113,10 @@
 											<span class="label-mark"><i class="icon-star-gray"></i></span>
 										</li>
 										<li class="run-item marked">
+											<i class="icon-update-pink"></i>
 											<div class="run-img">
 												<a href="#" data-open="run-03"><img src="pic/run/img-run-03.jpg" width="179" height="134" alt="image description" /><span class="run-count">3</span></a>
+											<div class="mask"><i class="icon-delete-white"></i></div>
 											</div>
 											<div class="run-content">
 												<strong class="run-title">Вестминстерское Аббатство</strong>
@@ -130,8 +142,10 @@
 											<span class="label-mark"><i class="icon-star-gray"></i></span>
 										</li>
 										<li class="run-item">
+											<i class="icon-update-pink"></i>
 											<div class="run-img">
 												<a href="#"><img src="pic/run/img-run-04.jpg" data-open="run-04" width="179" height="134" alt="image description" /><span class="run-count">4</span></a>
+												<div class="mask"><i class="icon-delete-white"></i></div>
 											</div>
 											<div class="run-content">
 												<strong class="run-title">Букингемский дворец</strong>
@@ -157,8 +171,10 @@
 											<span class="label-mark"><i class="icon-star-gray"></i></span>
 										</li>
 										<li class="run-item">
+											<i class="icon-update-pink"></i>
 											<div class="run-img">
 												<a href="#" data-open="run-05"><img src="pic/run/img-run-05.jpg" width="179" height="134" alt="image description" /><span class="run-count">5</span></a>
+												<div class="mask"><i class="icon-delete-white"></i></div>
 											</div>
 											<div class="run-content">
 												<strong class="run-title">Британский музей</strong>
@@ -187,8 +203,10 @@
 									<div class="group-title">День второй</div>
 									<ul class="run-list">
 										<li class="run-item">
+											<i class="icon-update-pink"></i>
 											<div class="run-img">
-												<a href="#" data-open="run-06"><img src="pic/run/img-run-01.jpg" width="179" height="134" alt="image description" /></a> <span class="run-count">1</span>
+												<a href="#" data-open="run-06"><img src="pic/run/img-run-01.jpg" width="179" height="134" alt="image description" /><span class="run-count">1</span></a>
+												<div class="mask"><i class="icon-delete-white"></i></div>
 											</div>
 											<div class="run-content">
 												<strong class="run-title">Биг- Бен (Big Ben)</strong>
@@ -214,8 +232,10 @@
 											<span class="label-mark"><i class="icon-star-gray"></i></span>
 										</li>
 										<li class="run-item">
+											<i class="icon-update-pink"></i>
 											<div class="run-img">
-												<a href="#" data-open="run-07"><img src="pic/run/img-run-02.jpg" width="179" height="134" alt="image description" /></a> <span class="run-count">2</span>
+												<a href="#" data-open="run-07"><img src="pic/run/img-run-02.jpg" width="179" height="134" alt="image description" /><span class="run-count">2</span></a>
+												<div class="mask"><i class="icon-delete-white"></i></div>
 											</div>
 											<div class="run-content">
 												<strong class="run-title">Тауэрский мост (Tower Bridge)</strong>
@@ -241,8 +261,10 @@
 											<span class="label-mark"><i class="icon-star-gray"></i></span>
 										</li>
 										<li class="run-item marked">
+											<i class="icon-update-pink"></i>
 											<div class="run-img">
-												<a href="#" data-open="run-08"><img src="pic/run/img-run-03.jpg" width="179" height="134" alt="image description" /></a> <span class="run-count">3</span>
+												<a href="#" data-open="run-08"><img src="pic/run/img-run-03.jpg" width="179" height="134" alt="image description" /><span class="run-count">3</span></a>
+												<div class="mask"><i class="icon-delete-white"></i></div>
 											</div>
 											<div class="run-content">
 												<strong class="run-title">Вестминстерское Аббатство</strong>
@@ -268,8 +290,10 @@
 											<span class="label-mark"><i class="icon-star-gray"></i></span>
 										</li>
 										<li class="run-item">
+											<i class="icon-update-pink"></i>
 											<div class="run-img">
-												<a href="#" data-open="run-09"><img src="pic/run/img-run-04.jpg" width="179" height="134" alt="image description" /></a> <span class="run-count">4</span>
+												<a href="#" data-open="run-09"><img src="pic/run/img-run-04.jpg" width="179" height="134" alt="image description" /><span class="run-count">4</span></a>
+												<div class="mask"><i class="icon-delete-white"></i></div>
 											</div>
 											<div class="run-content">
 												<strong class="run-title">Букингемский дворец</strong>
@@ -295,8 +319,10 @@
 											<span class="label-mark"><i class="icon-star-gray"></i></span>
 										</li>
 										<li class="run-item">
+											<i class="icon-update-pink"></i>
 											<div class="run-img">
-												<a href="#" data-open="run-10"><img src="pic/run/img-run-05.jpg" width="179" height="134" alt="image description" /></a> <span class="run-count">5</span>
+												<a href="#" data-open="run-10"><img src="pic/run/img-run-05.jpg" width="179" height="134" alt="image description" /><span class="run-count">5</span></a>
+												<div class="mask"><i class="icon-delete-white"></i></div>
 											</div>
 											<div class="run-content">
 												<strong class="run-title">Британский музей</strong>
@@ -328,11 +354,14 @@
 						<!--menu content end-->
 						<!--menu footer-->
 						<div class="menu-footer js-box-bottom">
-							<a href="#change-run-popup" class="btn-default-lg change-popup-open"><i class="icon-edit-white"></i><span class="text-inner">изменить маршрут</span></a>
+							<a href="#" class="btn-default-lg-dark"><i class="icon-add-white"></i><span class="text-inner">добавить еще один день</span></a>
+							<a href="#" class="btn-default-lg"><i class="icon-rebuild-white"></i><span class="text-inner">перестроить маршрут</span></a>
+							<a href="#" class="btn-default-lg-dark"><i class="icon-optimize-white"></i><span class="text-inner">оптимизировать маршрут</span></a>
+							<a href="#" class="btn-default-lg"><i class="icon-edit-white"></i><span class="text-inner">сохранить маршрут</span></a>
 						</div>
 						<!--menu footer end-->
 					</div>
-					<!--menu run ready end-->
+					<!--main section end-->
 
 					<!--additional sections-->
 					<div class="add-sections">
@@ -927,9 +956,198 @@
 								</div>
 								<!--run specification content end-->
 							</div>
-
 						</div>
 						<!--run specification end-->
+
+						<!--run places-->
+						<div class="run-places additional-panel">
+							<div class="tabs-wrap">
+								<div class="tab-control">
+									<ul class="tab-control-list">
+										<li><a href="#place-tabs-1"><span>Избранное</span></a></li>
+										<li><a href="#place-tabs-2"><span>Выбор редакции</span></a></li>
+										<li><a href="#place-tabs-3"><span>Знаменитые места</span></a></li>
+										<li><a href="#place-tabs-4"><span>Все места</span></a></li>
+									</ul>
+								</div>
+								<div class="tabs" data-padding-bottom="10" data-padding-top="0">
+									<div id="place-tabs-1">
+										<ul class="places-list">
+											<li class="places-item">
+												<div class="place-img">
+													<a href="#">
+														<img src="pic/run/img-run-lg-01.jpg" width="427" height="132" alt="image description">
+														<div class="mask">
+															<div class="mask-text">
+																<i class="icon-mask-place"></i>
+																<div class="text-inner">Добавить</div>
+															</div>
+														</div>
+													</a>
+												</div>
+												<div class="preview-meta">
+													<ul class="data-list">
+														<li><i class="icon-star-gray"></i><div class="text-inner">105</div></li>
+														<li><i class="icon-price-gray"></i><div class="text-inner">€ 5</div></li>
+														<li><i class="icon-time-gray"></i><div class="text-inner">1:35</div></li>
+													</ul>
+													<div class="preview-more"><a href="#">Подробнее о месте</a></div>
+												</div>
+												<h3>Биг Бен (Big Ben)</h3>
+												<p>Биг Бен (Большой Бен) – это прозвище главного колокола часовой башни Вестминстерского дворца. Существует традиция крестить церковные колокола и давать им имя какого-либо святого, но этот колокол, скорее всего, получил свое прозвище в честь сэра Бенджамина Холла.</p>
+												<div class="mask-full"></div>
+											</li>
+											<li class="places-item delete">
+												<div class="place-img">
+													<a href="#">
+														<img src="pic/run/img-run-lg-01.jpg" width="427" height="132" alt="image description">
+														<div class="mask">
+															<div class="mask-text">
+																<i class="icon-mask-place"></i>
+																<div class="text-inner">Добавить</div>
+															</div>
+														</div>
+													</a>
+												</div>
+												<div class="preview-meta">
+													<ul class="data-list">
+														<li><i class="icon-star-gray"></i><div class="text-inner">105</div></li>
+														<li><i class="icon-price-gray"></i><div class="text-inner">€ 5</div></li>
+														<li><i class="icon-time-gray"></i><div class="text-inner">1:35</div></li>
+													</ul>
+													<div class="preview-more"><a href="#">Подробнее о месте</a></div>
+												</div>
+												<h3>Биг Бен (Big Ben)</h3>
+												<p>Биг Бен (Большой Бен) – это прозвище главного колокола часовой башни Вестминстерского дворца. Существует традиция крестить церковные колокола и давать им имя какого-либо святого, но этот колокол, скорее всего, получил свое прозвище в честь сэра Бенджамина Холла.</p>
+												<div class="mask-full"></div>
+											</li>
+											<li class="places-item">
+												<div class="place-img">
+													<a href="#">
+														<img src="pic/run/img-run-lg-01.jpg" width="427" height="132" alt="image description">
+														<div class="mask">
+															<div class="mask-text">
+																<i class="icon-mask-place"></i>
+																<div class="text-inner">Добавить</div>
+															</div>
+														</div>
+													</a>
+												</div>
+												<div class="preview-meta">
+													<ul class="data-list">
+														<li><i class="icon-star-gray"></i><div class="text-inner">105</div></li>
+														<li><i class="icon-price-gray"></i><div class="text-inner">€ 5</div></li>
+														<li><i class="icon-time-gray"></i><div class="text-inner">1:35</div></li>
+													</ul>
+													<div class="preview-more"><a href="#">Подробнее о месте</a></div>
+												</div>
+												<h3>Биг Бен (Big Ben)</h3>
+												<p>Биг Бен (Большой Бен) – это прозвище главного колокола часовой башни Вестминстерского дворца. Существует традиция крестить церковные колокола и давать им имя какого-либо святого, но этот колокол, скорее всего, получил свое прозвище в честь сэра Бенджамина Холла.</p>
+												<div class="mask-full"></div>
+											</li>
+											<li class="places-item">
+												<div class="place-img">
+													<a href="#">
+														<img src="pic/run/img-run-lg-01.jpg" width="427" height="132" alt="image description">
+														<div class="mask">
+															<div class="mask-text">
+																<i class="icon-mask-place"></i>
+																<div class="text-inner">Добавить</div>
+															</div>
+														</div>
+													</a>
+												</div>
+												<div class="preview-meta">
+													<ul class="data-list">
+														<li><i class="icon-star-gray"></i><div class="text-inner">105</div></li>
+														<li><i class="icon-price-gray"></i><div class="text-inner">€ 5</div></li>
+														<li><i class="icon-time-gray"></i><div class="text-inner">1:35</div></li>
+													</ul>
+													<div class="preview-more"><a href="#">Подробнее о месте</a></div>
+												</div>
+												<h3>Биг Бен (Big Ben)</h3>
+												<p>Биг Бен (Большой Бен) – это прозвище главного колокола часовой башни Вестминстерского дворца. Существует традиция крестить церковные колокола и давать им имя какого-либо святого, но этот колокол, скорее всего, получил свое прозвище в честь сэра Бенджамина Холла.</p>
+												<div class="mask-full"></div>
+											</li>
+											<li class="places-item">
+												<div class="place-img">
+													<a href="#">
+														<img src="pic/run/img-run-lg-01.jpg" width="427" height="132" alt="image description">
+														<div class="mask">
+															<div class="mask-text">
+																<i class="icon-mask-place"></i>
+																<div class="text-inner">Добавить</div>
+															</div>
+														</div>
+													</a>
+												</div>
+												<div class="preview-meta">
+													<ul class="data-list">
+														<li><i class="icon-star-gray"></i><div class="text-inner">105</div></li>
+														<li><i class="icon-price-gray"></i><div class="text-inner">€ 5</div></li>
+														<li><i class="icon-time-gray"></i><div class="text-inner">1:35</div></li>
+													</ul>
+													<div class="preview-more"><a href="#">Подробнее о месте</a></div>
+												</div>
+												<h3>Биг Бен (Big Ben)</h3>
+												<p>Биг Бен (Большой Бен) – это прозвище главного колокола часовой башни Вестминстерского дворца. Существует традиция крестить церковные колокола и давать им имя какого-либо святого, но этот колокол, скорее всего, получил свое прозвище в честь сэра Бенджамина Холла.</p>
+												<div class="mask-full"></div>
+											</li>
+											<li class="places-item">
+												<div class="place-img">
+													<a href="#">
+														<img src="pic/run/img-run-lg-01.jpg" width="427" height="132" alt="image description">
+														<div class="mask">
+															<div class="mask-text">
+																<i class="icon-mask-place"></i>
+																<div class="text-inner">Добавить</div>
+															</div>
+														</div>
+													</a>
+												</div>
+												<div class="preview-meta">
+													<ul class="data-list">
+														<li><i class="icon-star-gray"></i><div class="text-inner">105</div></li>
+														<li><i class="icon-price-gray"></i><div class="text-inner">€ 5</div></li>
+														<li><i class="icon-time-gray"></i><div class="text-inner">1:35</div></li>
+													</ul>
+													<div class="preview-more"><a href="#">Подробнее о месте</a></div>
+												</div>
+												<h3>Биг Бен (Big Ben)</h3>
+												<p>Биг Бен (Большой Бен) – это прозвище главного колокола часовой башни Вестминстерского дворца. Существует традиция крестить церковные колокола и давать им имя какого-либо святого, но этот колокол, скорее всего, получил свое прозвище в честь сэра Бенджамина Холла.</p>
+												<div class="mask-full"></div>
+											</li>
+										</ul>
+									</div>
+									<div id="place-tabs-2">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias autem consectetur dolor dolore doloremque ducimus ea earum eos error est eum explicabo facere fugiat hic inventore ipsum laudantium libero, molestias, mollitia neque nulla numquam odio officiis placeat quasi rem repellendus sapiente temporibus ullam? Culpa ea eius eligendi fuga iusto labore laborum placeat quidem, ratione tempora! Accusamus autem blanditiis consectetur dolorum enim excepturi exercitationem, ipsam iste laudantium magni obcaecati odio officia optio perspiciatis porro quae quisquam reiciendis voluptas! Ab at consequatur deleniti eos, explicabo labore magnam mollitia nam natus nemo nesciunt nostrum quaerat quod reiciendis saepe sint sit vel velit.</p>
+									</div>
+									<div id="place-tabs-3">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam commodi ipsa labore officia officiis quaerat sapiente? Expedita magnam necessitatibus officia perferendis quidem recusandae sit sunt, tenetur velit? Est illo nulla officiis quibusdam voluptas. Blanditiis consectetur dicta dolorem, doloremque ipsum magni officia quo repellat soluta ullam? Beatae blanditiis delectus dignissimos eum nostrum odio quae qui quibusdam sapiente unde. Ad adipisci assumenda at atque commodi consectetur deserunt dolorem ex explicabo, hic itaque labore modi officiis quaerat quasi quis, quisquam reiciendis tenetur!</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam commodi ipsa labore officia officiis quaerat sapiente? Expedita magnam necessitatibus officia perferendis quidem recusandae sit sunt, tenetur velit? Est illo nulla officiis quibusdam voluptas. Blanditiis consectetur dicta dolorem, doloremque ipsum magni officia quo repellat soluta ullam? Beatae blanditiis delectus dignissimos eum nostrum odio quae qui quibusdam sapiente unde. Ad adipisci assumenda at atque commodi consectetur deserunt dolorem ex explicabo, hic itaque labore modi officiis quaerat quasi quis, quisquam reiciendis tenetur!</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam commodi ipsa labore officia officiis quaerat sapiente? Expedita magnam necessitatibus officia perferendis quidem recusandae sit sunt, tenetur velit? Est illo nulla officiis quibusdam voluptas. Blanditiis consectetur dicta dolorem, doloremque ipsum magni officia quo repellat soluta ullam? Beatae blanditiis delectus dignissimos eum nostrum odio quae qui quibusdam sapiente unde. Ad adipisci assumenda at atque commodi consectetur deserunt dolorem ex explicabo, hic itaque labore modi officiis quaerat quasi quis, quisquam reiciendis tenetur!</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam commodi ipsa labore officia officiis quaerat sapiente? Expedita magnam necessitatibus officia perferendis quidem recusandae sit sunt, tenetur velit? Est illo nulla officiis quibusdam voluptas. Blanditiis consectetur dicta dolorem, doloremque ipsum magni officia quo repellat soluta ullam? Beatae blanditiis delectus dignissimos eum nostrum odio quae qui quibusdam sapiente unde. Ad adipisci assumenda at atque commodi consectetur deserunt dolorem ex explicabo, hic itaque labore modi officiis quaerat quasi quis, quisquam reiciendis tenetur!</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam commodi ipsa labore officia officiis quaerat sapiente? Expedita magnam necessitatibus officia perferendis quidem recusandae sit sunt, tenetur velit? Est illo nulla officiis quibusdam voluptas. Blanditiis consectetur dicta dolorem, doloremque ipsum magni officia quo repellat soluta ullam? Beatae blanditiis delectus dignissimos eum nostrum odio quae qui quibusdam sapiente unde. Ad adipisci assumenda at atque commodi consectetur deserunt dolorem ex explicabo, hic itaque labore modi officiis quaerat quasi quis, quisquam reiciendis tenetur!</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam commodi ipsa labore officia officiis quaerat sapiente? Expedita magnam necessitatibus officia perferendis quidem recusandae sit sunt, tenetur velit? Est illo nulla officiis quibusdam voluptas. Blanditiis consectetur dicta dolorem, doloremque ipsum magni officia quo repellat soluta ullam? Beatae blanditiis delectus dignissimos eum nostrum odio quae qui quibusdam sapiente unde. Ad adipisci assumenda at atque commodi consectetur deserunt dolorem ex explicabo, hic itaque labore modi officiis quaerat quasi quis, quisquam reiciendis tenetur!</p>
+									</div>
+									<div id="place-tabs-4">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At delectus dolor eos et ex laudantium necessitatibus provident sit veritatis, vero. Accusamus accusantium, beatae consequatur cupiditate dicta ducimus eveniet facere facilis hic illum impedit iste itaque laboriosam modi optio quaerat quasi quia quidem quisquam ratione sit ut voluptates? Atque blanditiis dolore esse labore nemo officiis, perspiciatis quam quibusdam quidem ut? Alias animi enim esse, incidunt magnam molestiae non obcaecati rem vero?</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At delectus dolor eos et ex laudantium necessitatibus provident sit veritatis, vero. Accusamus accusantium, beatae consequatur cupiditate dicta ducimus eveniet facere facilis hic illum impedit iste itaque laboriosam modi optio quaerat quasi quia quidem quisquam ratione sit ut voluptates? Atque blanditiis dolore esse labore nemo officiis, perspiciatis quam quibusdam quidem ut? Alias animi enim esse, incidunt magnam molestiae non obcaecati rem vero?</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci amet aspernatur consectetur deleniti dicta dolores ea earum eius eligendi expedita facilis, iure maiores modi neque provident quos ratione, suscipit totam ut velit vitae voluptas. Adipisci assumenda autem dolores, doloribus, ex excepturi expedita facere fuga hic ipsum odio porro quaerat, voluptas? Accusamus adipisci animi consequuntur cupiditate distinctio dolorum eveniet explicabo quae recusandae reiciendis, rem, similique tempora unde? Amet dolorem minima optio quis ratione? Animi at, beatae earum perferendis porro sapiente. Alias animi aperiam cum cumque dolores ea excepturi, explicabo inventore, ipsa minima nemo nostrum quidem, quod soluta suscipit vitae voluptatem.</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam deleniti dolore, ea eaque eos eveniet illum iure libero quia rem!</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus commodi cum cupiditate dolor dolore et, explicabo id inventore libero minima molestiae optio porro praesentium quasi quod reiciendis rem rerum totam. Dolor, eum ipsa laudantium magni molestias perspiciatis soluta veritatis? Ab ad aliquam aliquid amet assumenda, dicta dolorem, enim laborum mollitia nesciunt nobis non tempore vitae voluptate voluptatem! Dolores doloribus enim esse facere molestias nam numquam sit unde, vel voluptatum! Amet deleniti eius, illum in ipsa libero, obcaecati pariatur porro quia sint, ut veritatis voluptas voluptatibus.</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deleniti doloremque ipsam necessitatibus, quidem repellat. Amet aspernatur at cumque, ex illum iure maiores molestias omnis quod sunt totam vitae. Accusamus adipisci aliquam amet aspernatur commodi deleniti dolorum eius est, facere fugiat, fugit id impedit in itaque maiores nisi nobis numquam odio officiis quas recusandae rem repellat soluta suscipit tempora temporibus vero! Cum cupiditate dolor dolore earum eos illo incidunt libero minus molestiae mollitia nam non nostrum optio possimus, quidem quisquam reiciendis sequi unde veniam veritatis! Assumenda aut deserunt dolores eligendi enim error fugiat ipsa modi nemo non omnis perspiciatis praesentium reiciendis repellendus sit totam, vel veniam! Enim esse ipsum laborum, provident sapiente vel. Ad aliquid autem consequuntur culpa, error, ipsum iusto maiores mollitia nemo odio, pariatur perspiciatis placeat ratione recusandae repudiandae saepe sunt tempore totam velit voluptatibus. Blanditiis dolores eveniet iste, maiores molestiae molestias porro quaerat repellendus. Accusantium exercitationem, laudantium?</p>
+									</div>
+								</div>
+							</div>
+
+							<!--run filters-->
+							<div class="run-filters">
+
+							</div>
+							<!--run filters end-->
+						</div>
+						<!--run places end-->
 					</div>
 					<!--additional sections end-->
 				</div>

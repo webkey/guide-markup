@@ -4,3 +4,9 @@
 .map-menu .scrollable .viewport:after{
 	background: url(../img/grad-opacity.png) repeat-x;
 }
+.mask{
+	background: url(../img/bg-mask.png);
+}
+.place-img .mask.complete{
+	background: url(../img/grad-mask.png) repeat-y bottom 0;
+}

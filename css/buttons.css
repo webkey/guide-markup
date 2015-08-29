@@ -45,7 +45,7 @@
 	color: #fff;
 	text-transform: uppercase;
 	padding: 17px 10px 16px;
-	min-height: 24px;
+	min-height: 57px;
 }
 [class*="btn-default"][class*="-lg"] [class*="icon-"]{
 	vertical-align: middle;
