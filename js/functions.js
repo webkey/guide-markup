@@ -172,22 +172,6 @@ function initScrollpanelForTabs(scrollpanelElement) {
 }
 /*initial scrollpanel end*/
 
-/*open/close map menu*/
-function openMapMenu(){
-	if (!$('.map-menu').length) {return;}
-	$('body').on('click', '.btn-switch', function (e) {
-		e.preventDefault();
-		var thisBtn = $(this);
-		thisBtn
-			.closest('.map-menu')
-			.find('.map-menu-content')
-			.slideToggle(0, function () {
-				thisBtn.toggleClass('closed');
-			});
-	})
-}
-/*open/close main map menu end*/
-
 /*open/close additional panels*/
 function openAddPanel() {
 	var hideElement = $('.run-specification, .run-specification-item, .additional-panel');
@@ -325,7 +309,6 @@ $(document).ready(function(){
 	fancybox();
 	checkbox();
 	routesTypes();
-	openMapMenu();
 	openAddPanel();
 });
 $(window).load(function(){
