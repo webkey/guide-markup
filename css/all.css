@@ -2101,6 +2101,59 @@ input[type="checkbox"]{
 .info-tooltip-list > li:first-child{ border-left: none; }
 /*types of routes end*/
 
+/*map balloon*/
+.map-balloon{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 196px;
+	margin: -212px 0 0 -100px;
+}
+.map-balloon-holder{
+	background: #e9025f;
+	padding: 7px;
+	border-radius: 3px;
+	font-size: 14px;
+	line-height: 17px;
+	letter-spacing: -0.03em;
+	text-align: center;
+	color: #fff;
+	box-shadow: 9px 8px 0 rgba(0, 0, 0, 0.2);
+	position: relative;
+	z-index: 1;
+}
+.map-balloon-holder:before {
+	top: 100%;
+	left: 50%;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border: solid rgba(233, 2, 95, 0);
+	border-width: 8px 4px;
+	border-top-color: rgba(0, 0, 0, 0.2);
+	margin: 8px 0 0 5px;
+}
+.map-balloon-holder:after {
+	top: 100%;
+	left: 50%;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border: solid rgba(233, 2, 95, 0);
+	border-width: 8px 4px;
+	border-top-color: #e9025f;
+	margin-left: -4px;
+}
+.map-balloon-holder>div{
+	background: #ae1768;
+	padding: 12px 7px;
+}
+/*map balloon end*/
+
 /*map menu*/
 .map-menu{
 	float: right;

@@ -62,10 +62,8 @@ function yandexMap(){
 					scrollwheel: false
 				});
 				var myPlacemark = new ymaps.Placemark([latitude, longitude],{
-					balloonContentHeader: "Балун метки",
-					balloonContentBody: "Содержимое <em>балуна</em> метки",
-					balloonContentFooter: "Подвал",
-					hintContent: "Хинт метки"
+					balloonContentBody: "Проложить кратчайший путь к маршруту",
+					hintContent: "Проложить кратчайший путь к маршруту"
 				}, {
 					iconImageHref: './img/map-pin.png',
 					iconImageSize: [71, 108],
@@ -75,15 +73,9 @@ function yandexMap(){
 				myMap.controls.add('zoomControl', {top: '10px', left:'10px', height: '50px'});
 				myMap.geoObjects.add(myPlacemark);
 
-				myMap.balloon.open([latitude + 20, longitude + 20], "Проложить кратчайший путь к маршруту", {
+				/*myMap.balloon.open([latitude + 20, longitude + 20], "Проложить кратчайший путь к маршруту", {
 					closeButton: false
-				});
-
-				// Показываем хинт на карте (без привязки к геообъекту).
-				myMap.hint.show(myMap.getCenter(), "Содержимое хинта", {
-					// Опция: задержка перед открытием.
-					showTimeout: 1500
-				});
+				});*/
 				//function toggle () {
 				//	myMap.container.fitToViewport();
 				//	console.log(1);
