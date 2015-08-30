@@ -74,10 +74,27 @@ function yandexMap(){
 				// Add buttons and placemarks
 				myMap.controls.add('zoomControl', {top: '10px', left:'10px', height: '50px'});
 				myMap.geoObjects.add(myPlacemark);
+
+				myMap.balloon.open([latitude + 20, longitude + 20], "Проложить кратчайший путь к маршруту", {
+					closeButton: false
+				});
+
+				// Показываем хинт на карте (без привязки к геообъекту).
+				myMap.hint.show(myMap.getCenter(), "Содержимое хинта", {
+					// Опция: задержка перед открытием.
+					showTimeout: 1500
+				});
+				//function toggle () {
+				//	myMap.container.fitToViewport();
+				//	console.log(1);
+				//}
+				//$('.btn-switch').click(toggle);
 			});
 		});
 	}
 }
+
+
 /* yandexMap */
 
 /* fancybox */
@@ -162,6 +179,22 @@ function initScrollpanelForTabs(scrollpanelElement) {
 	});
 }
 /*initial scrollpanel end*/
+
+/*open/close map menu*/
+function openMapMenu(){
+	if (!$('.map-menu').length) {return;}
+	$('body').on('click', '.btn-switch', function (e) {
+		e.preventDefault();
+		var thisBtn = $(this);
+		thisBtn
+			.closest('.map-menu')
+			.find('.map-menu-content')
+			.slideToggle(0, function () {
+				thisBtn.toggleClass('closed');
+			});
+	})
+}
+/*open/close main map menu end*/
 
 /*open/close additional panels*/
 function openAddPanel() {
@@ -300,6 +333,7 @@ $(document).ready(function(){
 	fancybox();
 	checkbox();
 	routesTypes();
+	openMapMenu();
 	openAddPanel();
 });
 $(window).load(function(){
@@ -309,5 +343,6 @@ $(window).load(function(){
 	initScrollpanel($(".scrollpanel"));
 });
 $(window).resize(function () {
+	paddingSize();
 	heightTabs($('.run-specification-info .tabs'));
 });
