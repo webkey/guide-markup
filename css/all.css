@@ -673,11 +673,8 @@ input[type="checkbox"]{
 [class*="btn-menu"],
 [class*="btn-more"],
 .transition{
-	-webkit-transition: 0.2ms;
-	-moz-transition: 0.2ms;
-	-ms-transition: 0.2ms;
-	-o-transition: 0.2ms;
-	transition: 0.2ms;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
 	backface-visibility: hidden;
 	/*-webkit-transform: translateZ(0);*/
 	/*transform: translateZ(0);*/
