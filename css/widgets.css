@@ -25,7 +25,7 @@
 #fancybox-loading{position:fixed;top:50%;left:50%;margin-top:-22px;margin-left:-22px;background-position:0 -108px;opacity:.8;cursor:pointer;z-index:8060}
 .fancybox-close,.fancybox-nav,.fancybox-nav span{cursor:pointer;z-index:8040}
 #fancybox-loading div{width:44px;height:44px;background:url(../img/fancybox/fancybox_loading.gif) center center no-repeat}
-.fancybox-close{position:absolute;top:-14px;right:-14px;width:36px;height:36px;background:url(../img/sprite-icons.png) 12px -1304px no-repeat #e9025f;border-radius:50%;-webkit-transition:.2s;transition:.2s;backface-visibility:hidden;-webkit-transform:translateZ(0);transform:translateZ(0)}
+.fancybox-close{position:absolute;top:-14px;right:-8px;width:36px;height:36px;background:url(../img/sprite-icons.png) 12px -1304px no-repeat #e9025f;border-radius:50%;-webkit-transition:.2s;transition:.2s;backface-visibility:hidden;-webkit-transform:translateZ(0);transform:translateZ(0)}
 .change-run-popup-wrap .fancybox-close{display:none}
 .fancybox-close:hover{background-color:#cf025d}
 .fancybox-nav{position:absolute;top:0;width:40%;height:100%;background:url(../img/fancybox/blank.gif);/*! helps IE */
