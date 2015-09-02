@@ -601,7 +601,7 @@ input[type="checkbox"]{
 .search-form .btn-search,
 .current-language,
 .languages-list > li a,
-.user > a,
+.user a,
 .question-link a,
 .social-list li a,
 .top-menu-list a,
@@ -921,6 +921,7 @@ input[type="checkbox"]{
 	height: 100%;
 	font-size: 0;
 	letter-spacing: -4px;
+	position: relative;
 }
 .site-options .user > a{
 	height: 100%;
@@ -951,6 +952,114 @@ input[type="checkbox"]{
 	display: inline-block;
 	vertical-align: middle;
 	max-width: 170px;
+}
+.user-drop{
+	width: 167px;
+	position: absolute;
+	left: 34px;
+	top: 100%;
+	padding: 17px 0 0;
+	background: url(../img/empty.png);
+
+	-webkit-animation-name: fadeInDown;
+	animation-name: fadeInDown;
+	-webkit-animation-duration: 0.4s;
+	animation-duration: 0.4s;
+	animation-fill-mode: both;
+	display: none;
+}
+.user-drop:after {
+	bottom: 100%;
+	left: 20px;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border: solid rgba(233, 2, 95, 0);
+	border-bottom-color: #e9025f;
+	border-width: 7px 6px;
+	margin-bottom: -17px;
+}
+@-webkit-keyframes fadeInDown {
+	0% {
+		-webkit-transform: translateY(-30px);
+		transform: translateY(-30px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes fadeInDown {
+	0% {
+		-webkit-transform: translateY(-30px);
+		transform: translateY(-30px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+.site-options .user:hover .user-drop{
+	display: block;
+}
+.user-list{
+	background: #e9025f;
+	position: relative;
+	border-radius: 3px;
+	box-shadow: 0 1px 3px rgba(255, 255, 255, 0.5);
+	overflow: hidden;
+}
+.user-list li{
+	border-top: 1px solid #cd0354;
+}
+.user-list li:first-child{
+	border: none;
+}
+.user-list li a{
+	display: block;
+	height: 44px;
+	padding: 0 0 0 24px;
+	font-size: 0;
+	letter-spacing: -4px;
+	color: #fff;
+	text-decoration: none;
+}
+.user-list li a:after{
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-left: -1px;
+	width: 1px;
+}
+.user-list li a:hover,
+.user-list li a:active{
+	background: #ad094b;
+}
+.user-list li a:active{
+	box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.18);
+}
+.user-list li a > *{
+	font-size: 13px;
+	letter-spacing: normal;
+	display: inline-block;
+	vertical-align: middle;
+}
+.user-list li a [class*="icon-"]{
+	width: 25px;
+}
+.user-list li a .text-inner{
+	font-weight: 600;
+	font-size: 13px;
+	line-height: 17px;
+	letter-spacing: -0.03em;
+	width: 107px;
 }
 /*user end*/
 /*languages*/
