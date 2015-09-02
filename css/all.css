@@ -2062,6 +2062,9 @@ input[type="checkbox"]{
 .post{
 	padding: 0 0 37px;
 }
+.single-post{
+	padding-bottom: 0;
+}
 .post-title{
 	padding: 0 0 15px;
 }
@@ -2164,6 +2167,38 @@ input[type="checkbox"]{
 .post-img figure img{
 	border-radius: 3px;
 }
+.post .frame{
+	border: 1px solid #ebebeb;
+	border-radius: 3px;
+	margin-bottom: 30px;
+}
+/*message form*/
+.message-form textarea {
+	z-index: 2;
+	padding: 13px 13px 13px 41px;
+	border: 1px solid #ebebeb;
+	border-radius: 3px;
+	height: 180px;
+	min-height: 180px;
+}
+.message-form textarea:focus {
+	border-color: #cdcdcd;
+}
+.message-form .input-holder {
+	border-radius: 2px;
+	background: #fff;
+	position: relative;
+	margin: 0 0 9px;
+}
+.message-form .input-holder [class*="icon-"] {
+	position: absolute;
+	top: 16px;
+	left: 17px;
+}
+.message-form [class*="btn-"] {
+	padding: 11px 10px 9px;
+}
+/*message form end*/
 /*post end*/
 /*main end*/
 
