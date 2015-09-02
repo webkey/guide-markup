@@ -983,8 +983,8 @@ input[type="checkbox"]{
 }
 @-webkit-keyframes fadeInDown {
 	0% {
-		-webkit-transform: translateY(-30px);
-		transform: translateY(-30px);
+		-webkit-transform: translateY(-17px);
+		transform: translateY(-17px);
 		opacity: 0;
 	}
 	100% {
@@ -995,8 +995,8 @@ input[type="checkbox"]{
 }
 @keyframes fadeInDown {
 	0% {
-		-webkit-transform: translateY(-30px);
-		transform: translateY(-30px);
+		-webkit-transform: translateY(-17px);
+		transform: translateY(-17px);
 		opacity: 0;
 	}
 	100% {
