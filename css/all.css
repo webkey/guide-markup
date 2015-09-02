@@ -29,7 +29,7 @@ body{
 	min-width: 1000px;
 }
 .home-page{
-	background: url(../pic/homepage-img.jpg) no-repeat fixed;
+	background: url(../pic/homepage-img.jpg) no-repeat center top fixed;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
